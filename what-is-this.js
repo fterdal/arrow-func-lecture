@@ -6,25 +6,41 @@
   Lesson: don't use arrow functions when defining prototype methods
 */
 function Calculator() {
-  this.value = 0;
+  this.value = 1;
+  this.multiplyNum = num => this.value *= num;
 }
 
 Calculator.prototype.addNum = function(num) {
-  console.log('addNum this', this);
+  console.log('addNum:', this);
   this.value += num;
 }
 
-let stuff = 'im just some stuff';
-weirdHuh = 'what the heck am i?';
-Calculator.prototype.subtractNum = (num) => {
-  let thing = 'im a thing';
-  console.log('subtractNum this', this);
+Calculator.prototype.subtractNum = num => {
+  console.log('subtractNum:', this);
   this.value -= num;
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Make a new calculator
 let calc = new Calculator();
+
+Calculator.prototype.subtractNum.bind(calc);
+
 console.log('calc.value:', calc.value);
 
 // Add 5 (using standard function syntax)
@@ -34,5 +50,11 @@ console.log('calc.value:', calc.value);
 // Subtract 4 (using arrow function syntax)
 calc.subtractNum(4);
 console.log('calc.value:', calc.value);
+
+// Subtract 4 (using arrow function syntax)
+calc.multiplyNum(4);
+console.log('calc.value:', calc.value);
+
+console.log('Calculator.prototype:', Calculator.prototype);
 
 console.log('~~~~~~~~~\n\n~~~~~~~~~');
