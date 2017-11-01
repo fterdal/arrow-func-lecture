@@ -14,6 +14,8 @@ Calculator.prototype.addNum = function(num) {
   this.value += num;
 }
 
+let stuff = 'im just some stuff';
+weirdHuh = 'what the heck am i?';
 Calculator.prototype.subtractNum = (num) => {
   let thing = 'im a thing';
   console.log('subtractNum this', this);

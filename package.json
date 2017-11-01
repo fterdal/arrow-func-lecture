@@ -6,6 +6,7 @@
   "scripts": {
     "start": "nodemon -q ./what-is-this.js",
     "short": "nodemon -q ./short-syntax.js",
+    "anon": "nodemon -q ./anonymous.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
