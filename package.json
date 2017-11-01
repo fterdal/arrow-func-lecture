@@ -1,0 +1,16 @@
+{
+  "name": "arrows",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon -q ./what-is-this.js",
+    "short": "nodemon -q ./short-syntax.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^1.12.1"
+  }
+}
